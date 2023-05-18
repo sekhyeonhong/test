@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--basic.html-->
+    <!-- block (div, h, p, ul, li)
+    ㄴ 가로사이즈가 100%, 한줄내리기
+    ㄴ 스타일 제약이 없음
+
+    inline(a, img, span, b)
+    ㄴ 콘텐츠의 크기만큼 사이즈 설정
+    ㄴ 한줄내리기없음
+    ㄴ 스타일 제약이 있음=>사이즈, 여백 
+
+    * block태그 안에 inline태그 사용 -->
+
+    <div class="menu">
+        <a href="#">HOME</a>
+        <a href="#">ABOUT</a>
+        <a href="#">SERVISE</a>
+    </div>
+    <style>
+        .menu{
+            width: 1750px;
+            border: 1px solid #000;
+            text-align: right;
+            margin: 20px auto;
+            /* left, right, center (부모안 inline자손을 정렬할 때 사용) */
+        }
+        .menu > a{
+            /* margin:  20px 20px 20px 20px; 12(상), 3(우), 6(하), 9(좌)
+            margin:  20px 20px 20px; 상,하,좌우
+            margin:  20px 20px; 상하,좌우
+            margin:  20px; 상하좌우 */
+            margin: 0 20px;
+            color: #000;
+            text-decoration: none;
+        }
+    </style>
+    <div class="안개숲">
+        <img src="./img_안개숲.jpg" alt="숲 이미지" title="안개 낀 숲">
+    </div>
+    <style>
+        .안개숲{width:1750px;
+        margin: 0 auto;
+        }
+        .안개숲 > a{width: 100%;}
+    </style>
+
+    <div class="text-1">
+        <b>World's hottest destinations for vegans</b>
+        <p>
+        Europe national glove hotsposts hiking miles sleep Turkey
+        international Tripit paris. Amsterdam national earth flexi
+        billity vus diary tour peratior uncharted maps Europe.
+        Guide frequent flyuer yacht miles chartering. the China
+        country hospitality spa Paris luxury.
+       </p>
+        <a href="#">Read More ></a>
+    </div>
+    <style>
+        .text-1{
+            width: 1750px;
+            margin: 130px auto 110px auto;
+        }
+        .text-1 > b{
+            font-size: 74px;
+        }
+        .text-1 > p{
+            margin: 52px 0;
+            font-size: 36px;
+            color: #545454;
+            line-height: 43px; 
+            }
+        .text-1 > a{
+            font-size: 36px;
+            background: #d9d9d9;
+            padding: 20px 20px;
+            display: inline-block;
+            border-radius: 40px;
+            color: black;
+            text-decoration: none;
+        }
+    </style>
+    <div class="text-2">
+        <div><img src="./img_숲.jpg" alt="숲이미지"></div>
+        <b>An Amazing Journey 
+        Through The Mountains.</b>
+        <p>Europe national glove hotsposts hiking miles sleep Turkey
+            international Tripit paris. Amsterdam national earth flexi
+            billity vus diary tour peratior uncharted maps Europe.
+            Guide frequent flyuer yacht miles chartering miles.
+            </p>
+    </div>
+    <style>
+        .text-2{display: flex;
+        align-items: center;
+        }
+        .text-2 > div{width: 859px;}
+        .text-2 > div > img {width: 100%;}
+        .text-2 > b{font-size: 40px;
+        }
+        .text-2 > p{
+            font-size: 34px;
+        }
+    </style>
+</body>
+</html>
