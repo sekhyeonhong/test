@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- flex.html -->
+    <!--
+        1. 세로컨텐츠 
+        = 정렬(text-align, margin:0 auto)
+        = 폰트(font-size, color, line-height(줄간격)) 
+        = 여백(margin, padding)
+
+    2. 가로컨텐츠 (레이아웃, 정령)
+        =flex()
+        =float 
+    -->
+    <h2>justify-content</h2>
+    <div class="flex between">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+    </div>
+    
+    <div class="flex around">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+    </div>
+
+    <div class="flex evenly">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+    </div>
+
+    <div class="flex start">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+    </div>
+
+    <div class="flex center">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+    </div>
+
+    <div class="flex end">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+    </div>
+
+    <h2>flex-wrap / align-items / align-content</h2>
+    <div class="flex wrap between hei h-between">
+        <div>01</div>
+        <div>02</div>
+        <div>03</div>
+        <div>04</div>
+        <div>05</div>
+        <div>06</div>
+    </div>
+
+    <div class="flex hei center h-center">
+        <div>01</div>
+    </div>
+
+
+    </div>
+    
+    <div class="self">
+        <div>
+            <p>이미지</p>
+            <b>Etxebarri</b>
+        </div>
+        <div>
+            <p>이미지</p>
+            <b>Etxebarri</b>
+        </div>
+        <div>
+            <p>이미지</p>
+            <b>Etxebarri</b>
+        </div>
+        <div>
+            <p>이미지</p>
+            <b>Etxebarri</b>
+        </div>
+        <div>
+            <p>이미지</p>
+            <b>Etxebarri</b>
+        </div>
+        <div>
+            <p>이미지</p>
+            <b>Etxebarri</b>
+        </div>
+    </div>
+        
+    <div class="self-2">
+        <div class="left">
+            <img src="img_겨울.jpg" alt="겨울">
+        </div>
+        <div class="right">
+            <p><img src="img_겨울.jpg" alt="겨울"></p>
+            <p><img src="img_겨울.jpg" alt="겨울"></p>
+            <p><img src="img_겨울.jpg" alt="겨울"></p>
+        </div>
+
+        
+        <style>
+            .self-2{
+                width: 1000px; margin: 100px auto;
+                display: flex;
+            }
+            .self-2 .left{width: 70%;}
+            .self-2 .right{width: 20%;}
+            .self-2 img{width: 100%;}
+            </style>
+    <div class="self-3">
+        <div class="left">
+            <img src="img_안개숲.jpg" alt="안개">
+        </div>
+        <div class="right">
+            <b>dsadsadsad</b>
+            <p>sadsadsadsasad
+                sadsadsadsasad
+                sadsadsadsasad
+            </p>
+            <a href="#">Get Started </a>
+        </div>
+    </div>
+
+    <style>
+        .self-3{
+            width: 1000px; margin: 0 auto;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .self-3 >{width: 50%;}
+        .self-3 > div >img{
+            width: 100%;
+        }
+        .self-3 > p{
+            font-size: 20px;
+        }
+        .self-3 .right >a{
+            border: 1px solid black;
+            font-size: 10px;
+            background: yellow;
+            padding: 10px 10px;
+            display: inline-block;
+            color: black;
+            text-decoration: none;
+        }
+    </style>
+        
+    <style>
+        h2{
+            text-align: center;
+        }
+        .flex{
+            width: 800px; margin: 100px auto;
+            border: 1px solid black;
+            display: flex;
+        }
+        .flex > div{
+            width: 30%; height: 200px;
+            background-color: aqua;
+        }
+        .between{justify-content: space-between;}
+        .around{justify-content: space-around;}
+        .evenly{justify-content: space-evenly;}
+        .start{justify-content: start;}
+        .center{justify-content: center;}
+        .end{justify-content: end;}
+
+        .wrap{flex-wrap: wrap;}
+        .hei{height: 600px;}
+        .h-between{align-content: space-between;}
+        .h-center{align-items: center;}
+
+        h2{
+            text-align: center;
+        }
+        .self{
+            width: 1000px; 
+            margin: 0 auto;
+            padding: 5%;
+            border: 1px solid black;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            }
+        .self > div{
+            width: 30%; 
+            text-align: center;
+            }
+        .self > div >p{
+            height: 200px; 
+            background-color: rgb(163, 238, 101);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        </style>
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!--display: flex;
+        justify-content: start | center | end | space-between | space-around |space-evenly | 
+
+        align-content: start | center | end | space-between | space-around | space-evenly | 
+
+        align-items: start | center | end | 
+
+        flex-wrap: wrap | nowrap;
+
+        & justify-content,  align-content => 아이템이 여러개 있을때 & -->
+
+</body>
+</html>
