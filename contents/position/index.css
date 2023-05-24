@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500;1,600&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+
+body,p{
+    margin: 0;
+}
+.main{
+
+}
+.main .cont{}
+.main .cont .slide{
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+.main .cont .slide > .text{
+    background-color: rgba(80, 128, 38, 0.5);
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 120px;
+    color: white;
+}
+
+.main .cont .slide > .text > a{
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+.main .cont .slide > .text > div{
+    white-space: pre-line;
+}
+.main .cont .slide > .text > div > b{
+}
+.main .cont .slide > .text > div > p{
+    margin-bottom: 50px;
+}
+.main .cont .slide > p > img{ 
+    width: 100%;
+}
+
+
+.main .indi{
+    position: fixed;
+    right: 30px; top: 50%;
+    transform: translateY(-50%);
+}
+.main .indi > a{
+    width: 22px; height: 22px;
+    background-color: white;
+    display: block;
+    margin: 10px 0;
+    border-radius: 50%;
+}
