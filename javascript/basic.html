@@ -8,7 +8,8 @@
 </head>
 <body>
     <div class="sel">
-
+        <p>선택자 1</p>
+        <p>선택자 2</p>
     </div>
     <script>
         console.log("선택자");
@@ -16,6 +17,24 @@
         console.log( '30+30 =' + 60 );
         console.log( '30+30 =' + 60 + '점');
         console.log( `30+30 = ${60}점` );
+
+        console.log(document.querySelector('.sel') );
+        console.log(document.querySelector('.sel') .textContent );
+        console.log(document.querySelector('.sel') .className );
+
+        console.log(document.querySelectorAll('.sel > p') );
+        console.log(document.querySelectorAll('.sel > p') [0]);
+        console.log(document.querySelectorAll('.sel > p') [1].textContent);
+
+        document.querySelector('.sel') .className = 'sel2';
+        document.querySelectorAll('.sel2 > p')[1].textContent = '바뀐선택자';
+
+        element = document.querySelectorAll('.sel2 > p');
+        element[0].textContent = 'sdadsadsad1';
+        element[0].className = 'p1';
+        element[1].textContent = 'sdadsadsad 2';
+        element[1].className = 'p2';
+
     </script>
 
 
