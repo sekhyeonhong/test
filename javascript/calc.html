@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 산술연산자, 증감, 비교, 관계 연산자 -->
+
+    <script>
+        let x=10, y=20;
+        console.group('산술연산자');
+            console.log(x + y);
+            console.log(x - y);
+            console.log(x * y);
+            console.log(x / y);
+            console.log(x % y);
+        console.groupEnd();
+        
+        console.group('증감연산자');    // 좋아요,하트, 상품수량, 슬라이드 버튼에서도 사용 실제 값이 바뀜       
+            console.log(++x); // 1씩 증감 앞에 쓰면 즉각 반응 
+            console.log(x++); // 1씩 증감 뒤에 쓰면 즉각 반응이 안됨 줄이 끝나야 반영
+            console.log(--x);
+            console.log(x--);
+            console.log(x); 
+        console.groupEnd();
+        
+        console.group('비교연산자');  // 비교식이 잘못 되었을 떄는 false 맞을때는 true (슬라이드 배너 넘길때)
+            console.log(x > y);
+            console.log(x < y);
+            console.log(x <= y);  // y가 크거나 같다 항상=가 우측에 있다
+            console.log(x >= y);  // y가 작거나 같다
+            console.log(x == y);
+            console.log(x != y);  // x와 y가 같지않다
+            // !true => false !는 부정의 의미   
+            console.log(20 === 20); 
+            // ===3개일때는 값과 타입을 구분해준다.
+            console.log(20 !== '20'); 
+            // !== 값과 타입이 서로 다르다.
+        console.groupEnd();
+
+        console.group('관계연산자');  // &&연산자는 식이1개 이상일때
+            console.log(20 == 20 && 10 == 10 ); // && 붙으면 좌,우 결과값이 true일 경우 결과값이 true
+            console.log(10 == 10 && 20 == 10 && 30 == 10); 
+            // 모든식이 true일때 결과값이 true가 나옴
+            console.log(20 == 20 || 10 == 10 ); 
+            // 1개라도 true가있으면 결과값은 true
+
+            console.log(20 == 20 && 10 == 10) || (40 < 20 );
+                        // true                     false
+        console.groupEnd();
+        
+    </script>
+
+    <script>
+        // 합계, 평균, 등급
+        let html =100, css=70, js=10;
+        let total,avg;
+        total = html + css + js;
+        avg = total / 3;
+        // console.log(avg);
+
+        if(60 <= avg){
+            console.log('합격');
+        }
+        else{
+            console.log('불합격');
+        }
+    </script>
+
+    <!-- 조건문 활용 -->
+    <script>
+
+    </script>
+
+    <!-- 증감연산자 활용 -->
+    <div class="count">
+        <button>-</button>
+        <span> 0 </span>
+        <button>+</button>
+    </div>
+    <script>
+        const elBtn = document.querySelectorAll('.count button'),
+            elSpan = document.querySelector('.count span');
+
+        let num = 0;
+
+            elBtn[0].onclick = function(){
+                // num값이 0과 같을때 아래 명령을 실행 안함.
+                // num == 0 / num != 0
+                if(num != 0){
+                    // true 일때
+                    elSpan.textContent = --num;
+                }else{
+                    // false일 때
+                }
+            }
+            // 10미만 일때만 증가 시킬 수 있다.
+            elBtn[1].onclick = function(){
+                if(num < 10){
+
+                elSpan.textContent = ++num;
+            }
+        }
+    </script>
+</body>
+</html>
+<!-- 버튼은 두개라 all -->

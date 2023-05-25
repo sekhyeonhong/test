@@ -34,8 +34,62 @@
         element[0].className = 'p1';
         element[1].textContent = 'sdadsadsad 2';
         element[1].className = 'p2';
+    </script>
+<!-- prompt -->
+    <div class="member"></div>
+
+    <script>
+        return;
+        let name = prompt('당신의 이름은 무엇인가요??');
+        let tel = prompt('전화번호');
+
+        const member = document.querySelector('.member');
+        member.textContent = `${name}회원님 반갑습니다.
+                    연락처는 ${tel} 입니다.`
+    </script>
+
+    <script>
+        return;
+        let html = Number(prompt('html 점수는?')),
+            css = Number(prompt('css 점수는??'));
+        
+            console.log(typeof html);
+            console.log(html + css);
+        
+    </script>
+
+    <div class="ex">
+        <button>01</button>
+        <button>02</button>
+    </div>
+
+    <style>
+        .on{
+            background-color: aqua; color: red;
+        }
+    </style>
+    <script>
+        const elBtn = document.querySelectorAll('.ex button');
+        elBtn[0].onclick = function(){
+            elBtn[1].className = '';
+            elBtn[0].className = 'on';
+        }
+        elBtn[1].onclick = function(){
+            elBtn[0].className = '';
+            elBtn[1].className = 'on';
+        }
+        
+        let num = 0;
+        elBtn.forEach(function(v,k){
+            v.onclick = ()=>{
+                elBtn[num].className = '';
+                v.className = 'on';
+                num = k
+            }
+        })
 
     </script>
+
 
 
 
