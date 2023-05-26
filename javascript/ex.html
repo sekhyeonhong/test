@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="progress">
+        <p><span>100%</span></p>
+    </div>
+    <style>
+        .progress{
+            width: 500px;
+            background: antiquewhite;
+        }
+        .progress > p{
+            background: red; 
+            color: white;
+            font-size: 2rem;
+            text-align: center;
+            width: 70%;
+        }
+    </style>
+
+    <script>
+    
+        const elP = document.querySelector('.progress p'),
+            elSpan = document.querySelector('.progress span');
+    function skill(n){            
+            let num = 0;
+            
+            let count = setInterval(function(){
+                if(num < n){
+                    num++;
+                    elP.style = `width:${num}%`;
+                    elSpan.textContent = num + '%';
+                }else{
+                    clearInterval(count)
+                }
+            },20);
+        }
+    skill(100)
+    </script>
+
+<div class="ex">
+    <p><img src="./img/img_ex2.jpg" ali=""></p>
+    <button>prev</button>
+    <button>next</button>
+</div>
+<style>
+    .ex{
+        width: 300px; margin: 100px auto;
+    }
+    .ex img{
+        width: 100px;
+    }
+    .ex p{
+        margin-left: 0px; transition: 0.5s;
+    }
+</style>
+<script>
+    const elO = document.querySelector('.ex p'),
+        elBtn = document.querySelectorAll('.ex button');
+    let num = 0;
+
+    elBtn[0].onclick = function(){
+        move('prev'); 
+        // if(num > -3)num--;
+        // elO.style = `margin-left:${num}00px`;
+            }
+    elBtn[1].onclick = function(){
+        move('next');
+        // if(num < 3)num--;
+        // elO.style = `margin-left:${num}00px`;
+            }   
+    function move(str){
+        if(str === 'next'){
+            if(num < 3) num++;
+        }else{
+            if(num > -3)num--;
+        }
+        elO.style = `margin-left:${num}00px`;
+    }
+</script>
+
+<div class="ex2"> ??  </div>
+
+<style>
+    .ex2{width: 300px; height: 300px; 
+        margin: 100px auto;
+        border: 1px solid red;
+        font-size: 3rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .ex2 img{width: 100%;}
+</style>
+<script>
+    const ex2 = document.querySelector('.ex2');
+    ex2.onclick = function(){
+        ex2.innerHTML += '<img src="./img/img_ex1.jpg" alt="">'
+    }
+</script>
+
+
+</body>
+</html>
